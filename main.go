@@ -38,7 +38,7 @@ func main() {
   	store.Options.Secure = isProd
   	gothic.Store = store
 
-	callback_url = os.Getenv("callback-url")
+	callback_url := os.Getenv("callback-url")
 
   	goth.UseProviders(
     google.New(googleId, googleSecret, callback_url, "email", "profile"),
