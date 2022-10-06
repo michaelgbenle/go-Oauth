@@ -41,7 +41,10 @@ func main() {
   	goth.UseProviders(
     google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   	)
-	routes.SetupRouter()
+	p , err:=routes.SetupRouter()
+	if err != nil {
+		log.Fatal(err)
+	}
 
  			log.Println("listening on localhost:3000")
 	//	log.Fatal(http.ListenAndServe(port, p))
