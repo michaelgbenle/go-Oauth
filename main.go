@@ -66,12 +66,3 @@ func main() {
   log.Fatal(http.ListenAndServe(":3000", p))
 }
 
-func init(){
-	err := godotenv.Load()
-	if err != nil {
-	  log.Fatal("Error loading .env file")
-	}
-
-	googleId := os.Getenv("google-client-id")
-  googleSecret := os.Getenv("google-client-secret")
-}
