@@ -40,8 +40,8 @@ func main() {
     google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   	)
 
-  p := pat.New()
-  p.Get("/auth/{provider}/callback", func(res http.ResponseWriter, req *http.Request) {
+ 	 p := pat.New()
+  	 p.Get("/auth/{provider}/callback", func(res http.ResponseWriter, req *http.Request) {
 
     user, err := gothic.CompleteUserAuth(res, req)
     if err != nil {
