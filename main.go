@@ -32,7 +32,7 @@ func main() {
   gothic.Store = store
 
   goth.UseProviders(
-    google.New("our-google-client-id", "our-google-client-secret", "http://localhost:3000/auth/google/callback", "email", "profile"),
+    google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   )
 
   p := pat.New()
