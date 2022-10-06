@@ -18,6 +18,13 @@ import (
 
 
 func main() {
+	err := godotenv.Load()
+	if err != nil {
+	  log.Fatal("Error loading .env file")
+	}
+
+	googleId := os.Getenv("google-client-id")
+  googleSecret := os.Getenv("google-client-secret")
   
   key := "Secret-session-key"  // Replace with your SESSION_SECRET or similar
   maxAge := 86400 * 30  // 30 days
