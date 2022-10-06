@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
-	"html/template"
-	"net/http"
+	_"fmt"
+	_"html/template"
+	_"net/http"
 	"os"
 
 	"log"
 
-	"github.com/gorilla/pat"
+	_"github.com/gorilla/pat"
 	"github.com/gorilla/sessions"
 	"github.com/joho/godotenv"
 	"github.com/markbates/goth"
