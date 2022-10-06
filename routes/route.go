@@ -10,7 +10,7 @@ import (
 	"github.com/michaelgbenle/go-Oauth/handler"
 )
 
-func SetupRouter() {
+func SetupRouter() (){
 	p := pat.New()
 	p.Get("/auth/{provider}/callback", handler.SuccessHandler)
 
