@@ -8,7 +8,7 @@ import (
 	"github.com/markbates/goth/gothic"
 )
 
-func HandlerSuccess(res http.ResponseWriter, req *http.Request) {
+func SuccessHandler(res http.ResponseWriter, req *http.Request) {
 
 	user, err := gothic.CompleteUserAuth(res, req)
 	if err != nil {
