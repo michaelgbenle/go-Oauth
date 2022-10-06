@@ -14,7 +14,6 @@ import (
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/google"
-	"golang.org/x/net/route"
 )
 
 
