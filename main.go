@@ -21,7 +21,7 @@ import (
 
 func main() {
 
-	p , err:=routes.SetupRouter()
+	p ,port, err:=routes.SetupRouter()
 	if err != nil {
 		log.Fatal(err)
 	}
