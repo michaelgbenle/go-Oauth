@@ -1,10 +1,6 @@
 package routes
 
 import (
-	"fmt"
-	"html/template"
-	"net/http"
-
 	"github.com/gorilla/pat"
 	"github.com/michaelgbenle/go-Oauth/handler"
 )
