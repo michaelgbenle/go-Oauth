@@ -19,6 +19,6 @@ func SuccessHandler(res http.ResponseWriter, req *http.Request) {
 	t.Execute(res, user)
 }
 
-func(res http.ResponseWriter, req *http.Request) {
+func BeginAuth(res http.ResponseWriter, req *http.Request) {
 	gothic.BeginAuthHandler(res, req)
 }
