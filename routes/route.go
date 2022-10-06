@@ -13,7 +13,7 @@ import (
 	"github.com/michaelgbenle/go-Oauth/handler"
 )
 
-func SetupRouter() (*pat.Router,error){
+func SetupRouter() (*pat.Router,string,error){
 	err := godotenv.Load()
 	if err != nil {
 	  log.Fatal("Error loading .env file")
