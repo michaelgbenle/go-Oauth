@@ -1,20 +1,18 @@
 package main
 
-
-
 import (
-  "fmt"
-  "html/template"
-  "net/http"
-  
+	"fmt"
+	"html/template"
+	"net/http"
 
-  "log"
+	"log"
 
-  "github.com/gorilla/pat"
-  "github.com/markbates/goth"
-  "github.com/markbates/goth/gothic"
-  "github.com/markbates/goth/providers/google"
-  "github.com/gorilla/sessions"
+	"github.com/gorilla/pat"
+	"github.com/gorilla/sessions"
+	"github.com/joho/godotenv"
+	"github.com/markbates/goth"
+	"github.com/markbates/goth/gothic"
+	"github.com/markbates/goth/providers/google"
 )
 
 
@@ -61,5 +59,8 @@ func main() {
 }
 
 func init(){
-	
+	err := godotenv.Load()
+	if err != nil {
+	  log.Fatal("Error loading .env file")
+	}
 }
