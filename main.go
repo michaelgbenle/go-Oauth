@@ -14,6 +14,7 @@ import (
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/google"
+	"github.com/michaelgbenle/go-Oauth/routes"
 )
 
 
@@ -40,7 +41,7 @@ func main() {
   	goth.UseProviders(
     google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   	)
-	route.SetupRouter()
+	routes.SetupRouter()
 
  			log.Println("listening on localhost:3000")
 	//	log.Fatal(http.ListenAndServe(port, p))
