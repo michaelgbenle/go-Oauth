@@ -36,11 +36,12 @@ func main() {
   	store.Options.Path = "/"
   	store.Options.HttpOnly = true   // HttpOnly should always be enabled
   	store.Options.Secure = isProd
-
   	gothic.Store = store
 
+	callback_url = os.Getenv("callback-url")
+
   	goth.UseProviders(
-    google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
+    google.New(googleId, googleSecret, callback_url, "email", "profile"),
   	)
 	p , err:=routes.SetupRouter()
 	if err != nil {
