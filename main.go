@@ -1,19 +1,20 @@
 package main
 
 import (
-	_"fmt"
-	_"html/template"
-	_"net/http"
+	_ "fmt"
+	_ "html/template"
+	_ "net/http"
 	"os"
 
 	"log"
 
-	_"github.com/gorilla/pat"
+	_ "github.com/gorilla/pat"
 	"github.com/gorilla/sessions"
 	"github.com/joho/godotenv"
 	"github.com/markbates/goth"
 	"github.com/markbates/goth/gothic"
 	"github.com/markbates/goth/providers/google"
+	"golang.org/x/net/route"
 )
 
 
@@ -40,6 +41,7 @@ func main() {
   	goth.UseProviders(
     google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   	)
+	route.SetupRouter()
 
  			log.Println("listening on localhost:3000")
 	//	log.Fatal(http.ListenAndServe(port, p))
