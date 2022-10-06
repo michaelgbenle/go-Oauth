@@ -9,7 +9,7 @@ import (
 	"github.com/michaelgbenle/go-Oauth/handler"
 )
 
-func SetupRouter() (){
+func SetupRouter() (*pat.Router,error){
 	p := pat.New()
 	p.Get("/auth/{provider}/callback", handler.SuccessHandler)
 
