@@ -14,6 +14,7 @@ import (
 )
 
 func SetupRouter() (*pat.Router,string,error){
+
 	err := godotenv.Load()
 	if err != nil {
 	  log.Fatal("Error loading .env file")
@@ -32,6 +33,7 @@ func SetupRouter() (*pat.Router,string,error){
   	store.Options.Secure = isProd
   	gothic.Store = store
 
+	
 	callback_url := os.Getenv("callback-url")
 
   	goth.UseProviders(
