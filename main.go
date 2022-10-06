@@ -41,27 +41,7 @@ func main() {
     google.New(googleId, googleSecret, "http://localhost:3000/auth/google/callback", "email", "profile"),
   	)
 
- 	 p := pat.New()
-  	 p.Get("/auth/{provider}/callback", func(res http.ResponseWriter, req *http.Request) {
-
-    user, err := gothic.CompleteUserAuth(res, req)
-    if err != nil {
-      fmt.Fprintln(res, err)
-      return
-    }
-    t, _ := template.ParseFiles("templates/success.html")
-    t.Execute(res, user)
-  })
-
-  p.Get("/auth/{provider}", func(res http.ResponseWriter, req *http.Request) {
-    gothic.BeginAuthHandler(res, req)
-  })
-
-  p.Get("/", func(res http.ResponseWriter, req *http.Request) {
-    t, _ := template.ParseFiles("templates/index.html")
-    t.Execute(res, false)
-  })
-		log.Println("listening on localhost:3000")
+ 			log.Println("listening on localhost:3000")
 		log.Fatal(http.ListenAndServe(port, p))
 }
 
