@@ -1,5 +1,12 @@
 package handler
 
+import (
+	"fmt"
+	"html/template"
+	"net/http"
+
+	"github.com/markbates/goth/gothic"
+)
 
 func HandlerSuccess(res http.ResponseWriter, req *http.Request) {
 
