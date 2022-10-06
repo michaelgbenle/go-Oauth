@@ -7,7 +7,7 @@ require (
 	github.com/gorilla/sessions v1.2.1
 	github.com/joho/godotenv v1.4.0
 	github.com/markbates/goth v1.73.0
-	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2
+	golang.org/x/net v0.0.0-20211112202133-69e39bad7dc2 // indirect
 )
 
 require (
