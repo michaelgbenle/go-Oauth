@@ -8,7 +8,6 @@ import (
 
 
 func main() {
-
 	p ,port, err:=routes.SetupRouter()
 	if err != nil {
 		log.Fatal(err)
