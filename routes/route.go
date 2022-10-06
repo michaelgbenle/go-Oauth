@@ -15,9 +15,6 @@ func SetupRouter() (*pat.Router,error){
 
 	p.Get("/auth/{provider}", handler.BeginAuth)
 
-	p.Get("/", func(res http.ResponseWriter, req *http.Request) {
-		t, _ := template.ParseFiles("templates/index.html")
-		t.Execute(res, false)
-	})
+	p.Get("/", handler.HomePage)
 
 }
