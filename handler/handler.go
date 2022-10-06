@@ -18,3 +18,7 @@ func SuccessHandler(res http.ResponseWriter, req *http.Request) {
 	t, _ := template.ParseFiles("templates/success.html")
 	t.Execute(res, user)
 }
+
+func(res http.ResponseWriter, req *http.Request) {
+	gothic.BeginAuthHandler(res, req)
+}
