@@ -7,6 +7,9 @@ import (
 	"github.com/gorilla/pat"
 	"github.com/gorilla/sessions"
 	"github.com/joho/godotenv"
+	"github.com/markbates/goth"
+	"github.com/markbates/goth/gothic"
+	"github.com/markbates/goth/providers/google"
 	"github.com/michaelgbenle/go-Oauth/handler"
 )
 
