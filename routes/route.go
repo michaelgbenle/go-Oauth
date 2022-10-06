@@ -17,4 +17,5 @@ func SetupRouter() (*pat.Router,error){
 
 	p.Get("/", handler.HomePage)
 
+return p, nil
 }
