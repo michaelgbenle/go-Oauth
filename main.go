@@ -46,7 +46,7 @@ func main() {
 		log.Fatal(err)
 	}
 
- 			log.Println("listening on localhost:3000")
+ 			log.Println("listening on localhost, port", port)
 	//	log.Fatal(http.ListenAndServe(port, p))
 }
 
