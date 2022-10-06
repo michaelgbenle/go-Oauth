@@ -26,7 +26,7 @@ func main() {
 	googleId := os.Getenv("google-client-id")
   googleSecret := os.Getenv("google-client-secret")
   
-  key := "Secret-session-key"  // Replace with your SESSION_SECRET or similar
+  key :=os.Getenv("Secret-session-key")  // Replace with your SESSION_SECRET or similar
   maxAge := 86400 * 30  // 30 days
   isProd := false       // Set to true when serving over https
 
