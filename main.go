@@ -14,7 +14,7 @@ func main() {
 		log.Fatal(err)
 	}
 
- 		log.Println("listening on localhost, port", port)
+ 		log.Println("listening on localhost port", port)
 		log.Fatal(http.ListenAndServe(port, p))
 }
 
